@@ -8,8 +8,6 @@ import { handlerReadiness } from "./api/readiness.js";
 import { handlerNotesCreate, handlerNotesGet } from "./api/notes.js";
 import { handlerUsersCreate, handlerUsersGet } from "./api/users.js";
 
-
-
 const __dirname = path.resolve();
 
 if (!config.api.port) {
@@ -49,4 +47,3 @@ app.use("/v1", v1Router);
 app.listen(config.api.port, () => {
   console.log(`Server is running on port: ${config.api.port}`);
 });
-

@@ -24,3 +24,14 @@ jobs:
 
       - name: Build the app
         run: npm run build
+
+      - id: "auth"
+        uses: "google-github-actions/auth@v2"
+        with:
+          credentials_json: "${{ secrets.GCP_CREDENTIALS }}"
+
+      - name: "Use gcloud CLI"
+        run: "gcloud info"
+
+      - name: Build docker image
+        run: gcloud builds submit --tag asian-northeast1-docker.pkg.dev/swift-icon-479904-e3/notely-ar-repo/notely-api:latest

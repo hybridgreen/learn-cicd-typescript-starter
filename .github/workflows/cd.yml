@@ -36,3 +36,6 @@ jobs:
 
       - name: Build docker image
         run: gcloud builds submit --tag asia-northeast1-docker.pkg.dev/swift-icon-479904-e3/notely-ar-repo/notely-api:latest
+
+      - name: Deploy to Cloud run
+        run: gcloud run deploy notely --image asia-northeast1-docker.pkg.dev/swift-icon-479904-e3/notely-ar-repo/notely-api --region asia-northeast1 --allow-unauthenticated --project swift-icon-479904-e3 --max-instances=4

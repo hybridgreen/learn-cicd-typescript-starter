@@ -35,4 +35,4 @@ jobs:
         run: "gcloud info"
 
       - name: Build docker image
-        run: gcloud builds submit --tag asian-northeast1-docker.pkg.dev/swift-icon-479904-e3/notely-ar-repo/notely-api:latest
+        run: gcloud builds submit --tag asia-northeast1-docker.pkg.dev/swift-icon-479904-e3/notely-ar-repo/notely-api:latest
